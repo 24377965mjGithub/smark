@@ -276,4 +276,25 @@ class Smark
             echo "File doesn't exists or filename extension error";
         }
     }
+
+    public static function calculateTotalPrice($items, $discountThreshold, $discountRate, $taxRate) {
+        $subtotal = 0;
+
+        // Calculate subtotal
+        foreach ($items as $item) {
+            $subtotal += $item['price'] * $item['quantity'];
+        }
+
+        // Apply discount if subtotal exceeds the threshold
+        if ($subtotal > $discountThreshold) {
+            $discount = $subtotal * $discountRate;
+            $subtotal -= $discount;
+        }
+
+        // Apply tax
+        $tax = $subtotal * $taxRate;
+        $total = $subtotal + $tax;
+
+        return $total;
+    }
 }

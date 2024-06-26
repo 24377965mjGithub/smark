@@ -28,18 +28,19 @@
     <header>
         <div class="container">
             <h1>Smark</h1>
-            <i>Develop with confidence.</i> <br><br>
-            <span>compute()</span>
-            <span>isEven()</span>
-            <span>linearRegression()</span> <br> <br>
-            <span>downloadExcel()</span>
-            <span>downloadExcelAs()</span> <br> <br>
-            <span>withUrl()</span>
-            <span>jsonRead()</span>
-            <span>jsonPush()</span> <br> <br>
-            <span>jsonUnshift()</span>
-            <span>jsonUpdate()</span>
-            <span>jsonDelete()</span>
+            <i>Develop with confidence.</i> <br> <br>
+            <a href="#compute">compute()</a> <br>
+            <a href="#isEven">isEven()</a> <br>
+            <a href="#linearRegression">linearRegression()</a> <br>
+            <a href="#downloadExcel">downloadExcel()</a> <br>
+            <a href="#downloadExcelAs">downloadExcelAs()</a> <br>
+            <a href="#withUrl">withUrl()</a> <br>
+            <a href="#jsonRead">jsonRead()</a> <br>
+            <a href="#jsonPush">jsonPush()</a> <br>
+            <a href="#jsonUnshift">jsonUnshift()</a> <br>
+            <a href="#jsonUpdate">jsonUpdate()</a> <br>
+            <a href="#jsonDelete">jsonDelete()</a> <br>
+            <a href="#calculateTotalPrice">calculateTotalPrice()</a> <br>
         </div>
     </header>
 
@@ -48,7 +49,7 @@
             <h3>Installation</h3>
             <div>
                 <code>
-                    git clone git@github24377965mjGithub/smark
+                    git clone git@github.com:24377965mjGithub/smark.git
                 </code>
                 <p>
                     or download the zip file <a href="#">here</a>
@@ -76,7 +77,7 @@
             </div>
             <hr>
             <h3>Basic Usage</h3>
-            <div>
+            <div id="compute">
                 <h2>Computation</h2>
                 <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
                     Syntax: <br>
@@ -102,7 +103,7 @@
                     <code>Smark::compute('divide', [4, 2])</code> <br> <br>
                     Output: 2
                 </p>
-                <p>
+                <p id="isEven">
                     <b>isEven()</b> <br> <br>
                     <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
                         Syntax: <br>
@@ -111,7 +112,7 @@
                     <code>Smark::isEven(24)</code> <br> <br>
                     Output: true or 1
                 </p>
-                <p>
+                <p id="linearRegression">
                     <b>linearRegression()</b> <br> <br>
                     <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
                         Syntax: <br>
@@ -130,7 +131,7 @@
             <p>
                 Smark library offers an exceptional solution for exporting data to Excel, providing a robust and user-friendly experience. With its seamless integration and efficient functionality, this library ensures that exporting data is both quick and reliable. Whether for simple data exports or more complex tasks, Smark library stands out as a dependable tool that enhances productivity and simplifies workflows.
             </p>
-            <div>
+            <div id="downloadExcel">
                 <b>downloadExcel()</b>
 
                 <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
@@ -149,7 +150,7 @@
                 <img src="./docs/3.PNG" alt="">
             </div>
             <br>
-            <div>
+            <div id="downloadExcelAs">
                 <b>downloadExcelAs()</b>
                 <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
                     Syntax: <br>
@@ -171,7 +172,7 @@
             <p>
                 A string URL highlighter is a function  that scans a given text and automatically detects and highlights URLs by converting them into clickable hyperlinks. This tool enhances text by making URLs interactive, improving user experience and functionality. The implementation typically involves using regular expressions to identify URLs and then wrapping them in HTML <code>a</code> tags for highlighting.
             </p>
-            <div>
+            <div id="withUrl">
                 <b>withUrl()</b>
                 <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
                     Syntax: <br>
@@ -187,7 +188,7 @@
             <p>
                 A JSON file CRUD (Create, Read, Update, Delete) operation involves managing data stored in JSON file. This set of functions allows you to perform basic data operations, such as creating new entries, reading existing data, updating specific records, and deleting unwanted entries.
             </p>
-            <div>
+            <div id="jsonRead">
                 <i>In this case, I created a JSON file inside the public/json folder. <code>public/json/sample.json</code></i> <br> <br>
                 <b>jsonRead()</b>
                 <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
@@ -200,7 +201,7 @@
                     Output: []</a>
                 </p>
             </div>
-            <div>
+            <div id="jsonPush">
                 <b>jsonPush()</b>
                 <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
                     Syntax: <br>
@@ -213,7 +214,7 @@
                     Output: <code>[{"id": 1, "name": "Mark Jason"}]</code></a>
                 </p>
             </div>
-            <div>
+            <div id="jsonUnshift">
                 <b>jsonUnshift()</b>
                 <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
                     Syntax: <br>
@@ -226,7 +227,7 @@
                     Output: <code>[{"id": 0, "name": "Mark Jason"}, {"id": 1, "name": "Mark Jason"}]</code></a>
                 </p>
             </div>
-            <div>
+            <div id="jsonDelete">
                 <b>jsonDelete()</b>
                 <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
                     Syntax: <br>
@@ -239,7 +240,7 @@
                     Output: <code>[{"id": 1, "name": "Mark Jason"}]</code></a>
                 </p>
             </div>
-            <div>
+            <div id="jsonUpdate">
                 <b>jsonUpdate()</b>
                 <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
                     Syntax: <br>
@@ -250,6 +251,33 @@
 
                 <p>
                     Output: <code>[{"id": 1, "name": "Mark Jason Updated"}]</code></a>
+                </p>
+            </div>
+            <hr>
+
+            <!-- other functions -->
+
+            <h3>Other available functions</h3>
+            <div id="calculateTotalPrice">
+                <b>calculateTotalPrice()</b>
+                <p>
+                    A function that calculates the total price of an order after applying discounts and tax.
+                </p>
+                <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
+                    Syntax: <br>
+                    <code>Smark::calculateTotalPrice([array of orders ('price', 'quantity')], discount threshold, discount (percentage to decimal), tax (percentage to decimal))</code>
+                </p>
+<pre>Smark::calculateTotalPrice([
+    ['price' => 20, 'quantity' => 3],  // $60
+    ['price' => 50, 'quantity' => 2]   // $100
+], 100, 0.10, 0.05)</pre>
+
+                <p>
+                    Output: <code>151.2</code></a>
+                </p>
+
+                <p>
+                    Explanation: If the subtotal exceeds $100, apply a 10% discount. Apply a 5% tax on the discounted subtotal.
                 </p>
             </div>
         </div>
