@@ -44,6 +44,7 @@
             <a href="#calculateBMI">calculateBMI()</a> <br>
             <a href="#generateQRCode">generateQRCode()</a> <br>
             <a href="#generateBarCode">generateBarCode()</a> <br>
+            <a href="#sendMail">sendMail()</a> <br>
         </div>
     </header>
 
@@ -345,6 +346,39 @@
                 </p>
 
                 <img src="./docs/7.png" alt="">
+            </div>
+
+            <hr>
+
+            <div id="sendMail">
+                <b>sendMail()</b>
+                <p>
+                    A function that sends an email. Read more about this library <a href="https://github.com/PHPMailer/PHPMailer">here.</a> Learn how to generate your own gmail App Password <a href="https://www.youtube.com/watch?v=74QQfPrk4vE">here</a>.
+                </p>
+                <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
+                    Syntax: <br>
+                    <code>Smark::sendMail( <br> sender email, <br> sender email app password, <br> sent from email, <br> send from name, <br> reciever email, <br> reply to email, <br> reply to name, <br> subject, <br> body (in HTML format) <br> )</code>
+                </p>
+
+<pre>Smark::sendMail(
+    'markjasonespelita@gmail.com',
+    '--secret--',
+    'markjasonespelita@gmail.com',
+    'Mark Jason Espelita',
+    'mark.medivadigital@gmail.com',
+    'markjasonespelita@gmail.com',
+    'Mark Jason Espelita',
+    'Hello World',
+    'Hi Mark, This is a sample message from Smark!'
+)</pre>
+
+                <img src="./docs/8.png" alt="">
+
+                <p>
+                    Output:
+                </p>
+
+                <img src="./docs/9.png" alt="">
             </div>
         </div>
     </section>
