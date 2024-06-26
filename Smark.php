@@ -279,22 +279,31 @@ class Smark
 
     public static function calculateTotalPrice($items, $discountThreshold, $discountRate, $taxRate) {
         $subtotal = 0;
-
         // Calculate subtotal
         foreach ($items as $item) {
             $subtotal += $item['price'] * $item['quantity'];
         }
-
         // Apply discount if subtotal exceeds the threshold
         if ($subtotal > $discountThreshold) {
             $discount = $subtotal * $discountRate;
             $subtotal -= $discount;
         }
-
         // Apply tax
         $tax = $subtotal * $taxRate;
         $total = $subtotal + $tax;
-
         return $total;
+    }
+
+    public static function calculateBMI($weight, $height) {
+        // Check if weight and height are positive numbers
+        if ($weight <= 0 || $height <= 0) {
+            return "Weight and height must be positive numbers.";
+        }
+
+        // Calculate BMI
+        $bmi = $weight / ($height * $height);
+
+        // Return the BMI value rounded to two decimal places
+        return round($bmi, 2);
     }
 }
