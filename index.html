@@ -42,6 +42,8 @@
             <a href="#jsonDelete">jsonDelete()</a> <br>
             <a href="#calculateTotalPrice">calculateTotalPrice()</a> <br>
             <a href="#calculateBMI">calculateBMI()</a> <br>
+            <a href="#generateQRCode">generateQRCode()</a> <br>
+            <a href="#generateBarCode">generateBarCode()</a> <br>
         </div>
     </header>
 
@@ -199,7 +201,7 @@
 <pre>Smark::jsonRead('json/sample.json')</pre>
 
                 <p>
-                    Output: []</a>
+                    Output: []
                 </p>
             </div>
             <div id="jsonPush">
@@ -212,7 +214,7 @@
 <pre>Smark::jsonPush('json/sample.json', ['id' => 1, 'name' => 'Mark Jason'])</pre>
 
                 <p>
-                    Output: <code>[{"id": 1, "name": "Mark Jason"}]</code></a>
+                    Output: <code>[{"id": 1, "name": "Mark Jason"}]</code>
                 </p>
             </div>
             <div id="jsonUnshift">
@@ -225,7 +227,7 @@
 <pre>Smark::jsonUnshift('json/sample.json', ['id' => 0, 'name' => 'Mark Jason'])</pre>
 
                 <p>
-                    Output: <code>[{"id": 0, "name": "Mark Jason"}, {"id": 1, "name": "Mark Jason"}]</code></a>
+                    Output: <code>[{"id": 0, "name": "Mark Jason"}, {"id": 1, "name": "Mark Jason"}]</code>
                 </p>
             </div>
             <div id="jsonDelete">
@@ -238,7 +240,7 @@
 <pre>Smark::jsonDelete('json/sample.json', 'id', 0)</pre>
 
                 <p>
-                    Output: <code>[{"id": 1, "name": "Mark Jason"}]</code></a>
+                    Output: <code>[{"id": 1, "name": "Mark Jason"}]</code>
                 </p>
             </div>
             <div id="jsonUpdate">
@@ -251,7 +253,7 @@
 <pre>Smark::jsonUpdate('json/sample.json', 'id', 1, 'name', 'Mark Jason Updated')</pre>
 
                 <p>
-                    Output: <code>[{"id": 1, "name": "Mark Jason Updated"}]</code></a>
+                    Output: <code>[{"id": 1, "name": "Mark Jason Updated"}]</code>
                 </p>
             </div>
             <hr>
@@ -274,7 +276,7 @@
 ], 100, 0.10, 0.05)</pre>
 
                 <p>
-                    Output: <code>151.2</code></a>
+                    Output: <code>151.2</code>
                 </p>
 
                 <p>
@@ -296,12 +298,53 @@
 <pre>Smark::calculateBMI(70, 1.5)</pre>
 
                 <p>
-                    Output: <code>31.11</code></a>
+                    Output: <code>31.11</code>
                 </p>
 
                 <p>
                     Explanation: The BMI is calculated using the formula: BMI = weight / (height * height). The result is rounded to two decimal places for better readability.
                 </p>
+            </div>
+            <hr>
+
+            <div id="generateQRCode">
+                <b>generateQRCode()</b>
+                <p>
+                    A function that generates QR Code.
+                </p>
+                <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
+                    Syntax: <br>
+                    <code>Smark::generateQRCode(data)</code>
+                </p>
+
+                <img src="./docs/5.png" alt="">
+
+                <p>
+                    Output:
+                </p>
+
+                <img src="./docs/6.png" alt="">
+            </div>
+
+            <hr>
+
+            <div id="generateBarCode">
+                <b>generateBarCode()</b>
+                <p>
+                    A function that generates Bar Code. Read more about this library <a href="https://github.com/picqer/php-barcode-generator?tab=readme-ov-file">here.</a>
+                </p>
+                <p style="padding: 10px; border: 1px green; background-color: rgba(0, 128, 0, 0.19); border-radius: 10px;">
+                    Syntax: <br>
+                    <code>Smark::generateBarCode(data)</code>
+                </p>
+
+<pre>Smark::generateBarCode('I love Smark!')</pre>
+
+                <p>
+                    Output:
+                </p>
+
+                <img src="./docs/7.png" alt="">
             </div>
         </div>
     </section>

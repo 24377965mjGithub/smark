@@ -2,7 +2,9 @@
 
 namespace App\Smark;
 
+use chillerlan\QRCode\QRCode; // for qrcode
 use CodexWorld\PhpXlsxGenerator; // for export report
+use Picqer\Barcode\BarcodeGeneratorHTML; // for barcode
 use VStelmakh\UrlHighlight\UrlHighlight; // for url highlighter
 
 class Smark
@@ -299,11 +301,26 @@ class Smark
         if ($weight <= 0 || $height <= 0) {
             return "Weight and height must be positive numbers.";
         }
-
         // Calculate BMI
         $bmi = $weight / ($height * $height);
-
         // Return the BMI value rounded to two decimal places
         return round($bmi, 2);
+    }
+
+    // QRCODE
+
+    public static function generateQRCode($data)
+    {
+        require 'qrcode/vendor/autoload.php';
+        return (new QRCode())->render($data);
+    }
+
+    // BARCODE
+
+    public static function generateBarCode($data)
+    {
+        require 'barcode/vendor/autoload.php';
+        $generator = new BarcodeGeneratorHTML();
+        return $generator->getBarcode($data, $generator::TYPE_CODE_128);
     }
 }
