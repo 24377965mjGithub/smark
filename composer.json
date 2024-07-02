@@ -1,0 +1,11 @@
+{
+    "name": "mjespelita/smark",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mark Jason Espelita",
+            "email": "mjespelita.swashed@gmail.com"
+        }
+    ],
+    "require": {}
+}
